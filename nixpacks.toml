@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["nginx"]
+
+[phases.build]
+cmd = "mkdir -p /var/www/html && cp -r . /var/www/html"
+
+[phases.start]
+cmd = "nginx -g 'daemon off;'"
